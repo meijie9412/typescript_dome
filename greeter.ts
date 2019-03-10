@@ -1,6 +1,6 @@
 function greeter(person:string){
     return 'hello,'+person;
 }
-let user = [1,2];
+let user = '123';
 
 document.body.innerHTML = greeter(user);

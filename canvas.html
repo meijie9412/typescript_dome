@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color:black">
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+    <script>
+        (function(){
+            //获取canvas元素
+            var CANVAS = document.getElementById('myCanvas');
+            if(CANVAS.getContext){
+                var ctx = CANVAS.getContext('2d');
+                //新建一个image对象
+                var image = new Image();
+                image.onload = () => {
+                    ctx.drawImage(image,100,100);
+                    var imageData = ctx.getImageData(0,0,10,10);
+                    console.log(imageData);
+                }
+                image.src = './logo.png';
+                
+                
+            }
+        }())
+    </script>
+</body>
+</html>
