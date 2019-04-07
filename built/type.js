@@ -14,6 +14,23 @@ var Color;
 })(Color || (Color = {}));
 ;
 var c = Color.green;
-
-console.log(Color);
-console.log(c);
+//不检查,任意类型   
+var notsure = 4;
+// void 没有任何类型，没有返回值得函数，只能赋予 null，undefined
+var warn = function () {
+    console.log('11');
+};
+var unusbale = null;
+//never 无法执行到终点（无线循环）、抛出异常时使用
+var error = function (message) {
+    throw new Error(message);
+};
+var whileFun = function () {
+    while (true) {
+    }
+};
+//object 非原始类型
+var myObject = { name: 'meijie' };
+//类型断言
+var someString = 'this is string';
+var someNumber = someString.length;
