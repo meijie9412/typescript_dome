@@ -39,4 +39,13 @@ const create_config = (options:config) => {
 let myConfig = create_config({color:'red'});
 
 
-//3
+//3 函数类型
+interface searchFunc {
+    (source:"string",substring:"string"):void
+}
+
+let mySearch:searchFunc;
+mySearch = (source:string,substring:string) => {
+    let result = source.search(substring);
+   
+}
